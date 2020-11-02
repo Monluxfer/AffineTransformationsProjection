@@ -54,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_rotateAngle = new System.Windows.Forms.TextBox();
-            this.radioButton_rotateCustom = new System.Windows.Forms.RadioButton();
             this.radioButton_rotateZ = new System.Windows.Forms.RadioButton();
             this.radioButton_rotateY = new System.Windows.Forms.RadioButton();
             this.radioButton_rotateX = new System.Windows.Forms.RadioButton();
@@ -67,8 +66,7 @@
             this.textBox_displY = new System.Windows.Forms.TextBox();
             this.textBox_displX = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton_rotateCustom = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel.SuspendLayout();
             this.panel_scale.SuspendLayout();
@@ -255,14 +253,6 @@
             resources.ApplyResources(this.textBox_rotateAngle, "textBox_rotateAngle");
             this.textBox_rotateAngle.Name = "textBox_rotateAngle";
             // 
-            // radioButton_rotateCustom
-            // 
-            resources.ApplyResources(this.radioButton_rotateCustom, "radioButton_rotateCustom");
-            this.radioButton_rotateCustom.Name = "radioButton_rotateCustom";
-            this.radioButton_rotateCustom.TabStop = true;
-            this.radioButton_rotateCustom.UseVisualStyleBackColor = true;
-            this.radioButton_rotateCustom.CheckedChanged += new System.EventHandler(this.radioButton_rotateX_CheckedChanged);
-            // 
             // radioButton_rotateZ
             // 
             resources.ApplyResources(this.radioButton_rotateZ, "radioButton_rotateZ");
@@ -346,34 +336,23 @@
             this.comboBox1.Items.AddRange(new object[] {
             resources.GetString("comboBox1.Items"),
             resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3")});
+            resources.GetString("comboBox1.Items2")});
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // radioButton1
+            // radioButton_rotateCustom
             // 
-            resources.ApplyResources(this.radioButton1, "radioButton1");
-            this.radioButton1.Checked = true;
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            resources.ApplyResources(this.radioButton2, "radioButton2");
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            resources.ApplyResources(this.radioButton_rotateCustom, "radioButton_rotateCustom");
+            this.radioButton_rotateCustom.Name = "radioButton_rotateCustom";
+            this.radioButton_rotateCustom.TabStop = true;
+            this.radioButton_rotateCustom.UseVisualStyleBackColor = true;
+            this.radioButton_rotateCustom.CheckedChanged += new System.EventHandler(this.radioButton_rotateX_CheckedChanged);
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -390,7 +369,6 @@
             this.panel_displ.ResumeLayout(false);
             this.panel_displ.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -413,7 +391,6 @@
         private System.Windows.Forms.RadioButton radioButton_rotateY;
         private System.Windows.Forms.RadioButton radioButton_rotateX;
         private System.Windows.Forms.TextBox textBox_rotateAngle;
-        private System.Windows.Forms.RadioButton radioButton_rotateCustom;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_customY2;
@@ -434,8 +411,7 @@
         private System.Windows.Forms.TextBox textBox_customZ1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton_rotateCustom;
     }
 }
 

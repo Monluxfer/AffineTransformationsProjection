@@ -31,24 +31,16 @@ namespace Interface
             InitializeComponent();
             ClearScreen();
             Figure figure = new Figure();
-            //Point3d p1 = new Point3d(-50, 50, 0);
-            //Point3d p2 = new Point3d(50, 50, 0);
-            //Point3d p3 = new Point3d(50, -50, 0);
-            //Point3d p4 = new Point3d(-50, -50, 0);
-            //figure.Add(new Line(p1, p4));
             double px = -5;
             double py = Math.Cos(-5);
             for (double x = -5; x < 5; x += 0.1)
             {
                 double cx = x;
                 double cy = Math.Sin(cx);
-                figure.Add(new Line(new Point3d(20*px, 20*py - 50, 0), new Point3d(20*cx, 20*cy -50, 0)));
+                //figure.Add(new Line(new Point3d(20*px, 20*py - 50, 0), new Point3d(20*cx, 20*cy -50, 0)));
                 px = cx;
                 py = cy;
             }
-            //figure.Add(new Line(p2, p3));
-            //figure.Add(new Line(p3, p4));
-            //figure.Add(new Line(p4, p1));
             f = figure;
             DrawFigure();
 
@@ -74,7 +66,6 @@ namespace Interface
             Point3d p7 = new Point3d(-100 / 2, 100 / 2, -100 / 2);
             Point3d p8 = new Point3d(-100 / 2, 100 / 2, 100 / 2);
 
-			// Должна быть именно такая последовательность описания, иначе отображается не совсем корректно
             figure.Add(new Line(p1, p2));
             figure.Add(new Line(p2, p3));
             figure.Add(new Line(p1, p5));
@@ -103,7 +94,6 @@ namespace Interface
             Point3d p3 = new Point3d(50, -coef / 2, 0);
             Point3d p4 = new Point3d(0, -coef / 2, -coef);
 
-			// Должна быть именно такая последовательность описания, иначе отображается не совсем корректно
 			figure.Add(new Line(p3, p4));
 			figure.Add(new Line(p2, p4));
 			figure.Add(new Line(p3, p1));
@@ -182,7 +172,6 @@ namespace Interface
                 {
 
                     var ugol = Point3d.Ugol(fac.Normal(), new Point3d(0, 0, 1));
-                    // Console.WriteLine(ugol);
                     if (Math.Abs(ugol) > (3.0 / 2))
                         continue;
 
@@ -208,11 +197,7 @@ namespace Interface
             {
                 f = Hexahedron();
             }
-            else if(comboBox1.SelectedIndex == 2)
-            {
-                f = Figure.Generate(((double x, double y) => { return x * x - y * y; }), -30, -30, 0, 0, 10, 10);
-            }
-            else
+            else if (comboBox1.SelectedIndex == 2)
             {
                 f = Figure.Generate(((double x, double y) => { return x - y; }), -30, -30, 0, 0, 10, 10);
             }
@@ -298,14 +283,6 @@ namespace Interface
             DrawFigure();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-                clipping = true;
-            else
-                clipping = false;
-            DrawFigure();
-        }
     }
   
 }
